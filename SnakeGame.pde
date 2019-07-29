@@ -1,4 +1,4 @@
-PImage image; //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
+PImage image; //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
 PImage [] planetsss = new PImage[9];
 import ddf.minim.*;
 import ddf.minim.analysis.*;
@@ -19,14 +19,14 @@ void setup()
   setInitialSnakeHeadPosition(snakeHeadPositionX, snakeHeadPositionY);
   setSnakeDirection(direction);
   println(frameCount);
-  initializeSong("Sandbox.mp3");
-  
+  initializeSong("Sandbox.mp3"); 
+  elevatorSong();
   setInitialSnakePieceNumber(4);
 }
 
 void draw()
 {
-
+  //<>//
   if (intro)
   {
     sistemSolar();

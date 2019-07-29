@@ -102,37 +102,38 @@ void sistemSolar()
   }
   if (asist==2)
   {
+    textAlign(LEFT, TOP);
     background(200, 200, 0);
     fill(255);
     rect(width/9, 2*height/13, width/10, height/15);
     fill(60, 0, 60);
     textSize(30);
-    text("Start", width/9.2, height/2-407);
+    text("Start", width/8, 2*height/13);
     fill(255);
     rect(width/9, 4*height/13, width/10, height/15);
     fill(60, 0, 60);
     textSize(30);
-    text("Quit", width/9.2, height/2-253);
+    text("Quit", width/8, 4*height/13);
     fill(255);
     rect(width/9, 6*height/13, width/10, height/15);
     fill(60, 0, 60);
     textSize(30);
-    text("Credits", width/9.2, height/2-100);
+    text("Credits", width/8, 6*height/13);
     fill(255);
     rect(width/9, 8*height/13, width/10, height/15);
     fill(60, 0, 60);
     textSize(30);
-    text("Settings", width/9.2, height/2+50);
+    text("Settings", width/8, 8*height/13);
     fill(255);
     rect(width/9, 10*height/13, width/10, height/15);
     fill(60, 0, 60);
     textSize(30);
-    text("Snakes", width/9.2, height/2+200);
+    text("Snakes", width/8, 10*height/13);
     fill(255);
-    rect(width/9, 12*height/13, width/10, height/15); 
+    rect(width/9, 12*height/13, width/9, height/15); 
     fill(60, 0, 60);
     textSize(30);
-    text("GameMode", width/1, height/2+350);
+    text("GameMode", width/8, 12*height/13);
   }
 }
 
@@ -159,8 +160,7 @@ void mousePressed()
   }
   if (mouseInQuit(width/9, 4*height/13, width/10, height/15))
   {
-    fill(100);
-    ellipse(width/2, height/5, 100, 100);
+    exit();
   }
   if (mouseInCredits(width/9, 6*height/13, width/10, height/15))
   {

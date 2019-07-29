@@ -1,4 +1,5 @@
- void planeteleMirunei()
+
+void  planeteleMirunei()
  {
    background(0);
   ellipseMode(CENTER); 

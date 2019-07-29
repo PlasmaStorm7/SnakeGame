@@ -22,7 +22,7 @@ void initializeSong()
   songLength=player.position();
   player.cue(0);
 }
-void replaySong()
+ void replaySong()
 {
   if ( player.position() >= songLength-20 )
   {

@@ -1,3 +1,7 @@
+int backgroundr;
+int backgroundg;
+int backgroundb;
+
 int asist=0;
 
 float SunD=100;

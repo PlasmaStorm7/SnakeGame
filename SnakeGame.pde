@@ -14,6 +14,23 @@ void setup()
   println(frameCount);
   //playMusic();
   setInitialSnakePieceNumber(4);
+  fullScreen();
+  background(0);
+  ellipseMode(CENTER); 
+  pb = createGraphics(3200, 1600);
+  Earthr=width/6;
+  Venusr=width/8;
+  Jupiterr=width/3;
+  Saturnr=width/2.5;
+  Uranusr=width/2.2;
+  Neptunr=width/2;
+  Marsr=width/5;
+  Mercuryr=width/12;
+  Moonr=25;
+  pa = createGraphics(3200, 1600);
+  backgroundr=200;
+  backgroundg=200;
+  backgroundb=0;
 }
 
 void draw()
@@ -22,9 +39,10 @@ void draw()
   {
     if (frameCount<200)
     {
-      fill(236, 247, 90);
-      ellipse(random(0, width), random(0, height), random(9, 12), random(9, 12));
-    } else
+     sistemSolar();
+    } 
+    
+    /*else
     {
       intro=false;
       background(10);
@@ -38,7 +56,8 @@ void draw()
     line(0, i*height/10, width, i*height/10);
   }
     }
-  }
+  }*/
+}
 }
 
 

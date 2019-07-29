@@ -61,7 +61,7 @@ void sistemSolar()
       fill(200, 200, 0);
       ellipse(width/2, height/2, SunD, SunD);
     }
-    SunD+=10;
+    SunD+=15;
     if (SunD==2400)
     {
       background(255);
@@ -70,6 +70,8 @@ void sistemSolar()
   }
   if (asist==2)
   {
+   
+    background(backgroundr, backgroundg, backgroundb);
    
   }
 }

@@ -28,15 +28,15 @@ void draw()
       intro=false;
       background(10);
       drawSnakeHead(snakeHeadPositionX, snakeHeadPositionY, headSize, eyeSize);
-    }
-  }
-  for ( i=0; i<columns; i++)
+      for ( i=0; i<columns; i++)
   {
     line(i*width/10, 0, i*width/10, height);
   }
   for ( i=0; i<rows; i++)
   {
     line(0, i*height/10, width, i*height/10);
+  }
+    }
   }
 }
 

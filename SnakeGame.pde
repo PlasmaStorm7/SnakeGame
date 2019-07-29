@@ -1,8 +1,8 @@
-PImage image; //<>// //<>// //<>// //<>// //<>// //<>//
+PImage image; //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
 PImage [] planetsss = new PImage[9];
 
 
-import ddf.minim.*; //<>//
+import ddf.minim.*;
 import ddf.minim.analysis.*;
 Minim minim;
 AudioPlayer player;
@@ -77,7 +77,14 @@ void draw()
     //food();
     //snake();
     //head();
-    if(frameCount%40==0)
-    advanceGame(); //<>//
+    if (frameCount%20==0)
+      advanceGame();
+
+    if (snakeDead==true)
+    {
+      textAlign(CENTER, CENTER);
+      text("You Died!!",width/2,height/2);
+      
+    }
   }
 }

@@ -3,7 +3,7 @@ void  planeteleMirunei()
 {
   background(0);
   ellipseMode(CENTER); 
-  image=loadImage("Asteroid.png");
+  image=loadImage("star.gif");
   planetsss[0]=loadImage("jupiter.png");
   planetsss[1]=loadImage("mars.png");
   planetsss[2]=loadImage("Earth.png");

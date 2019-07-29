@@ -1,4 +1,4 @@
-void KeyPressed()
+void keyPressed()
 {
   if (key=='p' || key=='P')
   {

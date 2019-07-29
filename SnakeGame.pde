@@ -67,6 +67,7 @@ void draw()
           break;
         case FOODPIECE:
           food(i*width/rows, j*height/columns, width/rows*0.8, height/columns*0.8);
+          break;
         default:
           break;
         }
@@ -77,6 +78,6 @@ void draw()
     //snake();
     //head();
     if(frameCount%40==0)
-    advanceGame();
+    advanceGame(); //<>//
   }
 }

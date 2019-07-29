@@ -164,7 +164,7 @@ void advanceGame()
     return;
   }
   changeDirection(lastDirection);
-  lastDirection = -1;
+  lastDirection = -1; //<>//
 
   int positionX = snakePiecesX[0];
   int positionY = snakePiecesY[0];
@@ -174,6 +174,7 @@ void advanceGame()
   {
   case UP:
     positionY--;
+    
     break;
   case DOWN:
     positionY++;

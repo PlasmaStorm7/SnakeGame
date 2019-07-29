@@ -40,6 +40,7 @@ void draw()
     }
 
     background(10);
+    pictures();
     for ( i=0; i<columns; i++)
     {
       line(i*width/rows, 0, i*width/rows, height);
@@ -78,12 +79,13 @@ void draw()
 
     if (snakeDead==true)
     {
-       background(0);
+      background(0);
       image(img4,width/2,600);
       fill(90,247,220);
       textAlign(CENTER, CENTER);
       textSize(60);
-      text("You Died!!", width/2, height/2);
+      text(getScore(),width/2, height/2+60);
+      text("You Died!! ", width/2, height/2);
     }
   }
 }

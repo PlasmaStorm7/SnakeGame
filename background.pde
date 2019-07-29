@@ -16,13 +16,13 @@ void spongebob()
   img6=loadImage("gary.png");
   img7=loadImage("puff.png");
 }
- 
- void pictures()
- {
-   image(img1,width-200,300);
-   image(img2,width/2, 300,300,270);
-   image(img3,width-400,500);
-   image(img5,width/2-80,500);
-   image(img6,200,250,300,300);
-   image(img7,240,540,289,289);
- }
+
+void pictures()
+{
+  image(img1, width-200, 300);
+  image(img2, width/2, 300, 300, 270);
+  image(img3, width-400, 500);
+  image(img5, width/2-80, 500);
+  image(img6, 200, 250, 300, 300);
+  image(img7, 240, 540, 289, 289);
+}

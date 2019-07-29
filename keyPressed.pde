@@ -5,11 +5,17 @@ void keyPressed()
     if (gamePlaying == false)
     {
       unpause();
+      player.play();
+      elevatormusic.pause();
+      
     } else {
       pause();
+      player.pause();
+      elevatormusic.play();
+     
     }
   }
-  if(keyCode==UP ||keyCode==DOWN ||keyCode==LEFT ||keyCode==RIGHT )
+  if (keyCode==UP ||keyCode==DOWN ||keyCode==LEFT ||keyCode==RIGHT )
   {
     setSnakeDirection(keyCode);
   }

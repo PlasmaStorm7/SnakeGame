@@ -1,44 +1,48 @@
-PImage image; //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
+PImage image; //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
 PImage [] planetsss = new PImage[9];
-
-
 import ddf.minim.*;
 import ddf.minim.analysis.*;
 Minim minim;
+Minim minim2;
 AudioPlayer player;
+AudioPlayer elevatormusic;
 int i=0;
+boolean introsong=true;
 void setup()
 {
   fullScreen();
   planeteleMirunei();
-
+  spongebob();
   setRows(rows);
   setColumns(columns);
   setInitialSnakePieceNumber(snakePieces);
   setInitialSnakeHeadPosition(snakeHeadPositionX, snakeHeadPositionY);
   setSnakeDirection(direction);
   println(frameCount);
-  //playMusic();
+  initializeSong("Sandbox.mp3"); 
+  elevatorSong();
   setInitialSnakePieceNumber(4);
 }
 
 void draw()
 {
- //<>//
+  //<>//
   if (intro)
   {
     sistemSolar();
   } else {
+    if (introsong==true) 
+    {
+      player.close();
+      initializeSong("Vanishing-Point.mp3");
+      elevatorSong();
+      introsong=false;
+    }
 
     background(10);
-    for ( i=0; i<columns; i++)
-    {
-      line(i*width/rows, 0, i*width/rows, height);
-    }
-    for ( i=0; i<rows; i++)
-    {
-      line(0, i*height/columns, width, i*height/columns);
-    }
+    pictures();
+    
+  
     if (gameStarted==false)
     {
       startGame();
@@ -69,8 +73,13 @@ void draw()
 
     if (snakeDead==true)
     {
+      background(0);
+      image(img4, width/2, 600);
+      fill(90, 247, 220);
       textAlign(CENTER, CENTER);
-      text("You Died!!", width/2, height/2);
+      textSize(60);
+      text(getScore(), width/2, height/2+60);
+      text("You Died!! ", width/2, height/2);
     }
   }
 }

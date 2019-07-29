@@ -1,22 +1,3 @@
- planeteleMirunei()
- {
-   background(0);
-  ellipseMode(CENTER); 
-   pb = createGraphics(3200, 1600);
-  Earthr=width/6;
-  Venusr=width/8;
-  Jupiterr=width/3;
-  Saturnr=width/2.5;
-  Uranusr=width/2.2;
-  Neptunr=width/2;
-  Marsr=width/5;
-  Mercuryr=width/12;
-  Moonr=25;
-  pa = createGraphics(3200, 1600);
-  backgroundr=200;
-  backgroundg=200;
-  backgroundb=0;
- }
 void sistemSolar()
 {
   background(0);
@@ -70,10 +51,10 @@ void sistemSolar()
   if (asist==1)
   {
     background(0);
-    //pa.beginDraw();  
-    //pa.stroke(175, random(255), 0);
-    //pa.line(width/2, height/2, random(3200), random(1600));
-    //pa.endDraw();
+    pa.beginDraw();  
+    pa.stroke(175, random(255), 0);
+    pa.line(width/2, height/2, random(3200), random(1600));
+    pa.endDraw();
     image(pa, 0, 0);        
     if (SunD<2400)
     {
@@ -89,8 +70,9 @@ void sistemSolar()
   }
   if (asist==2)
   {
-   fill(backgroundr, backgroundg, backgroundb)
-   rect(0, 0, width, height);
+    fill(backgroundr, backgroundg, backgroundb);
+    rect(0, 0, width, height);
+  //intro=false;
     if (backgroundr>176)
     {
       backgroundr--;
@@ -103,16 +85,9 @@ void sistemSolar()
     {
       backgroundb++;
     }
-    background(backgroundr, backgroundg, backgroundb);
-    if (backgroundb==206)
-    {
-      asist=3;
-    }
+    
   }
-  if (asist==3)
-  {
-    intro=false;
-  }
+ 
 }
 
 

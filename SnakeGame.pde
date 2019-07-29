@@ -17,20 +17,22 @@ void setup()
 
 void draw()
 {
-  if (intro)
+  if (intro==true)
   {
-  if (frameCount<200)
-  {
-    fill(236, 247, 90);
-    ellipse(random(0, width), random(0, height), random(9, 12), random(9, 12));
-  }
+    if (frameCount<200)
+    {
+      fill(236, 247, 90);
+      ellipse(random(0, width), random(0, height), random(9, 12), random(9, 12));
+    }
   else
-  {
-    intro=false;
-    background(10);
+    {
+      intro=false;
+      background(10);
    drawSnakeHead(snakeHeadPositionX,snakeHeadPositionY, headSize,eyeSize);
- }
+    }
   }
+   
+    
 }
 
 

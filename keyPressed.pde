@@ -11,7 +11,7 @@ void KeyPressed()
   }
   if(keyCode==UP ||keyCode==DOWN ||keyCode==LEFT ||keyCode==RIGHT )
   {
-    changeDirection(keyCode);
+    setSnakeDirection(keyCode);
   }
   if (key=='m'||key=='M')
   {

@@ -11,6 +11,7 @@ void setup()
   setColumns(columns);
   setInitialSnakePieceNumber(snakePieces);
   setInitialSnakeHeadPosition(snakeHeadPositionX, snakeHeadPositionY);
+  setSnakeDirection(direction);
   println(frameCount);
   //playMusic();
   setInitialSnakePieceNumber(4);
@@ -40,6 +41,10 @@ void draw()
     {
     startGame();
     }
+    //food();
+    //snake();
+    //head();
+    advanceGame();
     
   }
 }

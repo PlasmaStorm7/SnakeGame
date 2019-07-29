@@ -17,7 +17,7 @@ void setup()
 
 void draw()
 {
-  if (intro)
+   if (intro)
   {
   if (frameCount<200)
   {
@@ -31,6 +31,10 @@ void draw()
    drawSnakeHead(snakeHeadPositionX,snakeHeadPositionY, headSize,eyeSize);
  }
   }
+  sistemSolar();  
+   
+ 
+
 }
 
 

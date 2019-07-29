@@ -9,4 +9,8 @@ void KeyPressed()
       pause();
     }
   }
+  if(keyCode==UP ||keyCode==DOWN ||keyCode==LEFT ||keyCode==RIGHT )
+  {
+    
+  }
 }

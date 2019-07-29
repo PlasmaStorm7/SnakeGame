@@ -51,18 +51,18 @@ void sistemSolar()
   if (asist==1)
   {
     background(0);
-    pa.beginDraw();  
-    pa.stroke(175, random(255), 0);
-    pa.line(width/2, height/2, random(3200), random(1600));
-    pa.endDraw();
+    //pa.beginDraw();  
+    //pa.stroke(175, random(255), 0);
+    //pa.line(width/2, height/2, random(3200), random(1600));
+    //pa.endDraw();
     image(pa, 0, 0);        
     if (SunD<2400)
     {
       fill(200, 200, 0);
       ellipse(width/2, height/2, SunD, SunD);
     }
-    SunD+=15;
-    if (SunD==2400)
+    SunD+=60;
+    if (SunD>=2400)
     {
       background(255);
       asist=2;
@@ -70,9 +70,28 @@ void sistemSolar()
   }
   if (asist==2)
   {
-   
-    background(backgroundr, backgroundg, backgroundb);
-   
+   intro=false;
+    //if (backgroundr>176)
+    //{
+    //  backgroundr--;
+    //}
+    //if (backgroundg>0)
+    //{
+    //  backgroundr--;
+    //}
+    //if (backgroundb<206)
+    //{
+    //  backgroundb++;
+    //}
+    //background(backgroundr, backgroundg, backgroundb);
+    //if (backgroundb==206)
+    //{
+    //  asist=3;
+    //}
+  }
+  if (asist==3)
+  {
+    background(0);
   }
 }
 

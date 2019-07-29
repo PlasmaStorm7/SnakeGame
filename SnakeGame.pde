@@ -1,6 +1,7 @@
 import ddf.minim.*;
+import ddf.minim.analysis.*;
 Minim minim;
-Audioplayer player;
+AudioPlayer player;
 void setup()
 {
   fullScreen();
@@ -10,6 +11,7 @@ void setup()
   setInitialSnakePieceNumber(snakePieces);
   setInitialSnakeHeadPosition(snakeHeadPositionX,snakeHeadPositionY);
   println(frameCount);
+  //playMusic();
 }
 
 void draw()

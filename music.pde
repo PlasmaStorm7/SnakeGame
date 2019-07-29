@@ -25,13 +25,11 @@ void elevatorSong()
   index=int(random(song.length));
   minim2 = new Minim(this);
   elevatormusic=minim.loadFile("Coasting.mp3", bandResolution);
-  elevatormusic.play();
   elevatormusic.setGain(gain);
   elevatormusic.cue(player.length());
   //println("player.position()="+player.position() );
   songLength2=elevatormusic.position();
   elevatormusic.cue(0);
-  elevatormusic.pause();
 }
  void replaySong()
 {

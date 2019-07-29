@@ -1,9 +1,9 @@
 
 void  planeteleMirunei()
- {
-   background(0);
+{
+  background(0);
   ellipseMode(CENTER); 
-   pb = createGraphics(3200, 1600);
+  pb = createGraphics(3200, 1600);
   Earthr=width/6;
   Venusr=width/8;
   Jupiterr=width/3;
@@ -17,57 +17,59 @@ void  planeteleMirunei()
   backgroundr=200;
   backgroundg=200;
   backgroundb=0;
- }
+}
 void sistemSolar()
 {
   background(0);
-  fill(200, 200, 0);
-  textSize(30);
-  text("Press the sun to start", width/2-100, height/9);
 
-  fill(200, 200, 0);     
-  ellipse(width/2, height/2, SunD, SunD);
-  pb.beginDraw();              
-  pb.fill(200, 200, 0);
-  pb.stroke(200, 200, 0);
-  pb.ellipse(random(3200), random(1600), sternerand, sternerand);  //sterneee 
-  if (sternect<200)
+  if (asist==0)
   {
+    fill(200, 200, 0);
+    textSize(30);
+    text("Press the sun to start", width/2-100, height/9);
+    fill(200, 200, 0);     
+    ellipse(width/2, height/2, SunD, SunD);
+    pb.beginDraw();              
+    pb.fill(200, 200, 0);
+    pb.stroke(200, 200, 0);
+    pb.ellipse(random(3200), random(1600), sternerand, sternerand);  //sterneee 
+    if (sternect<200)
+    {
 
-    sternerand=random(5);
+      sternerand=random(5);
+    }
+    sternect++;
+    pb.endDraw();
+    image(pb, 0, 0); 
+
+
+    fill(6, 67, 128);
+    planet( Neptunr, 35, 8); //Neptun
+    fill(0, 213, 220);
+    planet(Uranusr, 35, 7);  //Uranus
+    fill(243, 219, 139);
+    planet(Saturnr, 50, 6); //Saturn
+    fill(144, 82, 1);
+    planet(Mercuryr, 20, 0); //Mercury
+    fill(2, 118, 174);
+    planet(Earthr, 35, 2); //Earth
+    fill(195, 115, 11);
+    planet(Venusr, 30, 1); //Venus
+    fill(162, 0, 0);
+    planet(Marsr, 35, 3); //Mars
+    fill(255, 150, 0);
+    planet(Jupiterr, 60, 5); //Jupiter
+
+    an[2]-=v[2];
+    Earthx=width/2+cos(an[2])*Earthr;
+    Earthy=height/2+sin(an[2])*Earthr;
+    Moonx=Earthx+cos(an[9])*Moonr;
+    Moony=Earthy+sin(an[9])*Moonr;
+    fill(146);
+    ellipse(Moonx, Moony, 10, 10);
+    an[9]+=v[9];
+    an[2]+=v[2];
   }
-  sternect++;
-  pb.endDraw();
-  image(pb, 0, 0); 
-
-
-  fill(6, 67, 128);
-  planet( Neptunr, 35, 8); //Neptun
-  fill(0, 213, 220);
-  planet(Uranusr, 35, 7);  //Uranus
-  fill(243, 219, 139);
-  planet(Saturnr, 50, 6); //Saturn
-  fill(144, 82, 1);
-  planet(Mercuryr, 20, 0); //Mercury
-  fill(2, 118, 174);
-  planet(Earthr, 35, 2); //Earth
-  fill(195, 115, 11);
-  planet(Venusr, 30, 1); //Venus
-  fill(162, 0, 0);
-  planet(Marsr, 35, 3); //Mars
-  fill(255, 150, 0);
-  planet(Jupiterr, 60, 5); //Jupiter
-
-  an[2]-=v[2];
-  Earthx=width/2+cos(an[2])*Earthr;
-  Earthy=height/2+sin(an[2])*Earthr;
-  Moonx=Earthx+cos(an[9])*Moonr;
-  Moony=Earthy+sin(an[9])*Moonr;
-  fill(146);
-  ellipse(Moonx, Moony, 10, 10);
-  an[9]+=v[9];
-  an[2]+=v[2];
-
   if (asist==1)
   {
     background(0);
@@ -90,8 +92,8 @@ void sistemSolar()
   }
   if (asist==2)
   {
-   fill(backgroundr, backgroundg, backgroundb);
-   rect(0, 0, width, height);
+    fill(backgroundr, backgroundg, backgroundb);
+    rect(0, 0, width, height);
     if (backgroundr>176)
     {
       backgroundr--;
@@ -104,7 +106,7 @@ void sistemSolar()
     {
       backgroundb++;
     }
-    background(backgroundr, backgroundg, backgroundb);
+
     if (backgroundb==206)
     {
       asist=3;
@@ -112,7 +114,37 @@ void sistemSolar()
   }
   if (asist==3)
   {
-    intro=false;
+    background(0);
+    fill(255);
+    rect(width/9, height/2-450, width/10, height/15);
+    fill(60, 0, 60);
+    textSize(30);
+    text("Start", width/9+55, height/2-407);
+    fill(255);
+    rect(width/9, height/2-300, width/10, height/15);
+    fill(60, 0, 60);
+    textSize(30);
+    text("Quit", width/9+55, height/2-253);
+    fill(255);
+    rect(width/9, height/2-150, width/10, height/15);
+    fill(60, 0, 60);
+    textSize(30);
+    text("Credits", width/9+50, height/2-100);
+    fill(255);
+    rect(width/9, height/2, width/10, height/15);
+    fill(60, 0, 60);
+    textSize(30);
+    text("Settings", width/9+50, height/2+50);
+    fill(255);
+    rect(width/9, height/2+150, width/10, height/15);
+    fill(60, 0, 60);
+    textSize(30);
+    text("Snakes", width/9+55, height/2+200);
+    fill(255);
+    rect(width/9, height/2+300, width/10, height/15); 
+    fill(60, 0, 60);
+    textSize(30);
+    text("GameMode", width/9+25, height/2+350);
   }
 }
 
@@ -131,6 +163,36 @@ void mousePressed()
   if (mouseInCircle(width/2, height/2, 100))
   {
     asist=1;
+  }
+
+  if (mouseInStart(width/9, height/2-450, width/10, height/15))
+  {
+    intro=false;
+  }
+  if (mouseInQuit(width/9, height/2-300, width/10, height/15))
+  {
+    fill(100);
+    ellipse(width/2, height/2, 100, 100);
+  }
+  if (mouseInCredits(width/9, height/2-150, width/10, height/15))
+  {
+    fill(100);
+    ellipse(width/2, height/2, 100, 100);
+  }
+  if (mouseInSettings(width/9, height/2, width/10, height/15))
+  {
+    fill(100);
+    ellipse(width/2, height/2, 100, 100);
+  }
+  if (mouseInSnakes(width/9, height/2+150, width/10, height/15))
+  {
+    fill(100);
+    ellipse(width/2, height/2, 100, 100);
+  }
+  if (mouseInGameMode(width/9, height/2+300, width/10, height/15))
+  {
+    fill(100);
+    ellipse(width/2, height/2, 100, 100);
   }
 }
 
@@ -153,10 +215,42 @@ void planetee()
   backgroundr=200;
   backgroundg=200;
   backgroundb=0;
-
 }
 
 boolean mouseInCircle(float x, float y, float size)
 {
   return dist(x, y, mouseX, mouseY) < (size / 2);
+}
+
+
+boolean mouseInCredits(float x, float y, float rectWidth, float rectHeight)
+{
+  return mouseX > x && mouseX < (x + rectWidth) && mouseY > y && mouseY < (y + rectHeight);
+}
+
+
+boolean mouseInQuit(float x, float y, float rectWidth, float rectHeight)
+{
+  return mouseX > x && mouseX < (x + rectWidth) && mouseY > y && mouseY < (y + rectHeight);
+}
+
+boolean mouseInStart(float x, float y, float rectWidth, float rectHeight)
+{
+  return mouseX > x && mouseX < (x + rectWidth) && mouseY > y && mouseY < (y + rectHeight);
+}
+
+
+boolean mouseInSettings(float x, float y, float rectWidth, float rectHeight)
+{
+  return mouseX > x && mouseX < (x + rectWidth) && mouseY > y && mouseY < (y + rectHeight);
+}
+
+boolean mouseInSnakes(float x, float y, float rectWidth, float rectHeight)
+{
+  return mouseX > x && mouseX < (x + rectWidth) && mouseY > y && mouseY < (y + rectHeight);
+}
+
+boolean mouseInGameMode(float x, float y, float rectWidth, float rectHeight)
+{
+  return mouseX > x && mouseX < (x + rectWidth) && mouseY > y && mouseY < (y + rectHeight);
 }

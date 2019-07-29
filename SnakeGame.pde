@@ -1,4 +1,4 @@
-PImage image; //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
+PImage image; //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
 PImage [] planetsss = new PImage[9];
 import ddf.minim.*;
 import ddf.minim.analysis.*;
@@ -12,7 +12,7 @@ void setup()
 {
   fullScreen();
   planeteleMirunei();
-
+ spongebob();
   setRows(rows);
   setColumns(columns);
   setInitialSnakePieceNumber(snakePieces);
@@ -78,7 +78,11 @@ void draw()
 
     if (snakeDead==true)
     {
+       background(0);
+      image(img4,width/2,600);
+      fill(90,247,220);
       textAlign(CENTER, CENTER);
+      textSize(60);
       text("You Died!!", width/2, height/2);
     }
   }

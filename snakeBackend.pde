@@ -2,10 +2,13 @@ int rows = 10;
 int columns = 10;
 boolean gamePlaying = false;
 boolean snakeDead = false;
-boolean intro=1;
+boolean intro=true;
 
 int snakeHeadPositionX = 5;
 int snakeHeadPositionY = 5;
+float headSize = (width/10+height/10)/2;
+float eyeSize=headSize/5;
+
 int direction = RIGHT;
 int lastDirection;
 int snakePieces = 3;

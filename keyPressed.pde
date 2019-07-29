@@ -13,4 +13,9 @@ void KeyPressed()
   {
     
   }
+  if (key=='m'||key=='M')
+  {
+    asist=1;
+    intro=true;
+  }
 }

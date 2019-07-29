@@ -31,6 +31,13 @@ void draw()
    drawSnakeHead(snakeHeadPositionX,snakeHeadPositionY, headSize,eyeSize);
  }
   }
+  for (int i=0; i<columns; i++)
+  {
+    for (int j=0; j<rows; j++)
+    {
+      
+    }
+  }
 }
 
 

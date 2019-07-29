@@ -14,7 +14,7 @@ void setup()
   image=loadImage("Asteroid.png");
   planetsss[0]=loadImage("jupiter.png");
   planetsss[1]=loadImage("mars.png");
-  planetsss[2]=loadImage("earth.png");
+  planetsss[2]=loadImage("Earth.png");
   planetsss[3]=loadImage("pluto.png");
   planetsss[4]=loadImage("saturn.png");
   planetsss[5]=loadImage("uranus.png");

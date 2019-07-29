@@ -1,4 +1,4 @@
-PImage image; //<>// //<>// //<>//
+PImage image; //<>// //<>// //<>// //<>// //<>// //<>//
 PImage [] planetsss = new PImage[9];
 
 
@@ -46,11 +46,11 @@ void draw()
     background(10);
     for ( i=0; i<columns; i++)
     {
-      line(i*width/10, 0, i*width/10, height);
+      line(i*width/rows, 0, i*width/rows, height);
     }
     for ( i=0; i<rows; i++)
     {
-      line(0, i*height/10, width, i*height/10);
+      line(0, i*height/columns, width, i*height/columns);
     }
     if (gameStarted==false)
     {
@@ -67,6 +67,7 @@ void draw()
           break;
         case FOODPIECE:
           food(i*width/rows, j*height/columns, width/rows*0.8, height/columns*0.8);
+          break;
         default:
           break;
         }
@@ -76,6 +77,7 @@ void draw()
     //food();
     //snake();
     //head();
-    advanceGame();
+    if(frameCount%40==0)
+    advanceGame(); //<>//
   }
 }

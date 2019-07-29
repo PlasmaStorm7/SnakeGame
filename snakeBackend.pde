@@ -1,19 +1,19 @@
-int rows = 10;
-int columns = 10;
+int rows = 30;
+int columns = 30;
 
 boolean gamePlaying = false;
 boolean gameStarted= false;
 boolean snakeDead = false;
 boolean intro=true;
 
-int snakeHeadPositionX = 5;
-int snakeHeadPositionY = 5;
+int snakeHeadPositionX = rows/2;
+int snakeHeadPositionY = columns/2;
 float headSize = (width/10+height/10)*2;
 float eyeSize=headSize/5;
 
-int direction = RIGHT;
+int direction = LEFT;
 int lastDirection;
-int snakePieces = 3;
+int snakePieces = 2;
 int[] snakePiecesX;
 int[] snakePiecesY;
 int[][] board;
@@ -164,7 +164,7 @@ void advanceGame()
     return;
   }
   changeDirection(lastDirection);
-  lastDirection = -1;
+  lastDirection = -1; //<>//
 
   int positionX = snakePiecesX[0];
   int positionY = snakePiecesY[0];
@@ -174,6 +174,7 @@ void advanceGame()
   {
   case UP:
     positionY--;
+    
     break;
   case DOWN:
     positionY++;

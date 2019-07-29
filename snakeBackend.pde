@@ -131,8 +131,8 @@ void generateFoodPiece()
   while (!found)
   {
     //searches a random place for a food piece
-    int x = constrain(floor(random(columns)),1,columns-1);
-    int y = constrain(floor(random(rows)),1,columns-1);
+    int x = constrain(floor(random(columns)), 1, columns-1);
+    int y = constrain(floor(random(rows)), 1, columns-1);
     if (board[x][y] == NOPIECE)
     {
       board[x][y] = FOODPIECE;
@@ -174,7 +174,7 @@ void advanceGame()
   {
   case UP:
     positionY--;
-    
+
     break;
   case DOWN:
     positionY++;

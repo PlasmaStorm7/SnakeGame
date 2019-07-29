@@ -13,7 +13,7 @@ void keyPressed()
       elevatormusic.pause();
     }
   }
-  if(keyCode==UP ||keyCode==DOWN ||keyCode==LEFT ||keyCode==RIGHT )
+  if (keyCode==UP ||keyCode==DOWN ||keyCode==LEFT ||keyCode==RIGHT )
   {
     setSnakeDirection(keyCode);
   }

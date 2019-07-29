@@ -12,7 +12,7 @@ void setup()
 {
   fullScreen();
   planeteleMirunei();
- spongebob();
+  spongebob();
   setRows(rows);
   setColumns(columns);
   setInitialSnakePieceNumber(snakePieces);
@@ -41,14 +41,8 @@ void draw()
 
     background(10);
     pictures();
-    for ( i=0; i<columns; i++)
-    {
-      line(i*width/rows, 0, i*width/rows, height);
-    }
-    for ( i=0; i<rows; i++)
-    {
-      line(0, i*height/columns, width, i*height/columns);
-    }
+    
+  
     if (gameStarted==false)
     {
       startGame();
@@ -80,11 +74,11 @@ void draw()
     if (snakeDead==true)
     {
       background(0);
-      image(img4,width/2,600);
-      fill(90,247,220);
+      image(img4, width/2, 600);
+      fill(90, 247, 220);
       textAlign(CENTER, CENTER);
       textSize(60);
-      text(getScore(),width/2, height/2+60);
+      text(getScore(), width/2, height/2+60);
       text("You Died!! ", width/2, height/2);
     }
   }

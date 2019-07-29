@@ -31,7 +31,7 @@ void elevatorSong()
   songLength2=elevatormusic.position();
   elevatormusic.cue(0);
 }
- void replaySong()
+void replaySong()
 {
   if ( player.position() >= songLength-20 )
   {

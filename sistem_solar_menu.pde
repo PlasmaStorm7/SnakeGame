@@ -30,10 +30,11 @@ void  planeteleMirunei()
 }
 void sistemSolar()
 {
- 
+
 
   if (asist==0)
-  { background(0);
+  { 
+    background(0);
     fill(200, 200, 0);
     textSize(30);
     text("Press the sun to start", width/2-100, height/9);

@@ -1,7 +1,7 @@
 int bandResolution=1024;
 String[] song={ "Coasting.mp3", "Sandbox.mp3", "Vanishing-Point.mp3"};
 int index =0;
-float gain=-18;
+float gain=-14;
 int songLength;
 int songLength2;
 
@@ -28,8 +28,11 @@ void elevatorSong()
   elevatormusic.setGain(gain);
   elevatormusic.cue(player.length());
   //println("player.position()="+player.position() );
+  
   songLength2=elevatormusic.position();
   elevatormusic.cue(0);
+  elevatormusic.play();
+  elevatormusic.pause();
 }
  void replaySong()
 {

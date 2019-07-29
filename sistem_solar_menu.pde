@@ -21,8 +21,8 @@ void sistemSolar()
 {
   background(0);
   fill(200, 200, 0);
-  textSize(20);
-  text("Press the sun to start", width/2-40, height/9);
+  textSize(30);
+  text("Press the sun to start", width/2-100, height/9);
 
   fill(200, 200, 0);     
   ellipse(width/2, height/2, SunD, SunD);
@@ -80,7 +80,7 @@ void sistemSolar()
       fill(200, 200, 0);
       ellipse(width/2, height/2, SunD, SunD);
     }
-    SunD+=60;
+    SunD+=30;
     if (SunD>=2400)
     {
       background(255);
@@ -132,6 +132,24 @@ void mousePressed()
   }
 }
 
+void planetee()
+{
+  background(0);
+  ellipseMode(CENTER); 
+  pb = createGraphics(3200, 1600);
+
+  Earthr=width/6;
+  Venusr=width/8;
+  Jupiterr=width/3;
+  Saturnr=width/2.5;
+  Uranusr=width/2.2;
+  Neptunr=width/2;
+  Marsr=width/5;
+  Mercuryr=width/12;
+  Moonr=25;
+  pa = createGraphics(3200, 1600);
+
+}
 
 boolean mouseInCircle(float x, float y, float size)
 {

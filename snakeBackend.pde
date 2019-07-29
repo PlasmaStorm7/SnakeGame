@@ -2,6 +2,7 @@ int rows = 10;
 int columns = 10;
 boolean gamePlaying = false;
 boolean snakeDead = false;
+boolean intro=1;
 
 int snakeHeadPositionX = 5;
 int snakeHeadPositionY = 5;

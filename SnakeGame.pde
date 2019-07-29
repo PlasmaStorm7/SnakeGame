@@ -13,6 +13,7 @@ void setup()
   setInitialSnakeHeadPosition(snakeHeadPositionX, snakeHeadPositionY);
   println(frameCount);
   //playMusic();
+  setInitialSnakePieceNumber(4);
 }
 
 void draw()

@@ -1,5 +1,6 @@
 int rows = 10;
 int columns = 10;
+
 boolean gamePlaying = false;
 boolean snakeDead = false;
 boolean intro=true;

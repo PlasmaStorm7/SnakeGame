@@ -2,7 +2,7 @@ import ddf.minim.*;
 import ddf.minim.analysis.*;
 Minim minim;
 AudioPlayer player;
-
+int i=0;
 void setup()
 {
   fullScreen();
@@ -17,31 +17,27 @@ void setup()
 
 void draw()
 {
-  if (intro)
+  if (intro==true)
   {
     if (frameCount<200)
     {
       fill(236, 247, 90);
       ellipse(random(0, width), random(0, height), random(9, 12), random(9, 12));
-    }
-  else
+    } else
     {
       intro=false;
       background(10);
-   drawSnakeHead(snakeHeadPositionX,snakeHeadPositionY, headSize,eyeSize);
+      drawSnakeHead(snakeHeadPositionX, snakeHeadPositionY, headSize, eyeSize);
     }
   }
-  for (int i=0; i<columns; i++)
+  for ( i=0; i<columns; i++)
   {
-    for (int j=0; j<rows; j++)
-    {
-      
-    }
+    line(i*width/10, 0, i*width/10, height);
   }
-  sistemSolar();  
-   
- 
-
+  for ( i=0; i<rows; i++)
+  {
+    line(0, i*height/10, width, i*height/10);
+  }
 }
 
 
@@ -63,6 +59,4 @@ void drawSnakeHead(float Headx, float Heady, float sizeHead, float sizeEye )
   fill(100, 0, 0);
   rect(Headx-sizeHead/2-10, Heady-sizeHead/2-10, sizeHead/2, sizeHead/2);
   popMatrix();
-  
-  
 }

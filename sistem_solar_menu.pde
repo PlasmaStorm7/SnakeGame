@@ -90,7 +90,7 @@ void sistemSolar()
   }
   if (asist==2)
   {
-   fill(backgroundr, backgroundg, backgroundb)
+   fill(backgroundr, backgroundg, backgroundb);
    rect(0, 0, width, height);
     if (backgroundr>176)
     {

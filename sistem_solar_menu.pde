@@ -3,6 +3,16 @@ void  planeteleMirunei()
 {
   background(0);
   ellipseMode(CENTER); 
+  image=loadImage("Asteroid.png");
+  planetsss[0]=loadImage("jupiter.png");
+  planetsss[1]=loadImage("mars.png");
+  planetsss[2]=loadImage("Earth.png");
+  planetsss[3]=loadImage("pluto.png");
+  planetsss[4]=loadImage("saturn.png");
+  planetsss[5]=loadImage("uranus.png");
+  planetsss[6]=loadImage("neptun.png");
+  planetsss[7]=loadImage("venus.png");
+  planetsss[8]=loadImage("mercury.png");
   pb = createGraphics(3200, 1600);
   Earthr=width/6;
   Venusr=width/8;

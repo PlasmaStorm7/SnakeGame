@@ -6,8 +6,8 @@ boolean gameStarted= false;
 boolean snakeDead = false;
 boolean intro=true;
 
-int snakeHeadPositionX = 5;
-int snakeHeadPositionY = 5;
+int snakeHeadPositionX = rows/2;
+int snakeHeadPositionY = columns/2;
 float headSize = (width/10+height/10)*2;
 float eyeSize=headSize/5;
 

@@ -1,5 +1,8 @@
 int bandResolution=1024;
-String song;
+String[] song={ "Coasting.mp3", "Sandbox.mp3", "Vanishing-Point.mp3"};
+int index =0;
+float gain=-18;
+int songLength;
 void playMusic(){
 initializeSong();
 
@@ -8,9 +11,9 @@ initializeSong();
 
 void initializeSong()
 {
-  song=random()
+  index=int(random(song.length));
   minim = new Minim(this);
-  player=minim.loadFile(song, bandResolution);
+  player=minim.loadFile(song[index], bandResolution);
   player.play();
   player.setGain(gain);
   player.cue(player.length());

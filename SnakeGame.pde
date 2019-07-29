@@ -46,11 +46,11 @@ void draw()
     background(10);
     for ( i=0; i<columns; i++)
     {
-      line(i*width/10, 0, i*width/10, height);
+      line(i*width/rows, 0, i*width/rows, height);
     }
     for ( i=0; i<rows; i++)
     {
-      line(0, i*height/10, width, i*height/10);
+      line(0, i*height/columns, width, i*height/columns);
     }
     if (gameStarted==false)
     {

@@ -94,35 +94,35 @@ void sistemSolar()
   {
     background(200, 200, 0);
     fill(255);
-    rect(width/9, height/2-450, width/10, height/15);
+    rect(width/9, 2*height/13, width/10, height/15);
     fill(60, 0, 60);
     textSize(30);
-    text("Start", width/9+55, height/2-407);
+    text("Start", width/9.2, height/2-407);
     fill(255);
-    rect(width/9, height/2-300, width/10, height/15);
+    rect(width/9, 4*height/13, width/10, height/15);
     fill(60, 0, 60);
     textSize(30);
-    text("Quit", width/9+55, height/2-253);
+    text("Quit", width/9.2, height/2-253);
     fill(255);
-    rect(width/9, height/2-150, width/10, height/15);
+    rect(width/9, 6*height/13, width/10, height/15);
     fill(60, 0, 60);
     textSize(30);
-    text("Credits", width/9+50, height/2-100);
+    text("Credits", width/9.2, height/2-100);
     fill(255);
-    rect(width/9, height/2, width/10, height/15);
+    rect(width/9, 8*height/13, width/10, height/15);
     fill(60, 0, 60);
     textSize(30);
-    text("Settings", width/9+50, height/2+50);
+    text("Settings", width/9.2, height/2+50);
     fill(255);
-    rect(width/9, height/2+150, width/10, height/15);
+    rect(width/9, 10*height/13, width/10, height/15);
     fill(60, 0, 60);
     textSize(30);
-    text("Snakes", width/9+55, height/2+200);
+    text("Snakes", width/9.2, height/2+200);
     fill(255);
-    rect(width/9, height/2+300, width/10, height/15); 
+    rect(width/9, 12*height/13, width/10, height/15); 
     fill(60, 0, 60);
     textSize(30);
-    text("GameMode", width/9+25, height/2+350);
+    text("GameMode", width/1, height/2+350);
   }
 }
 
@@ -143,36 +143,36 @@ void mousePressed()
     asist=1;
   }
 
-  if (mouseInStart(width/9, height/2-450, width/10, height/15))
+  if (mouseInStart(width/9, 2*height/13, width/10, height/15))
   {
     intro=false;
   }
-  if (mouseInQuit(width/9, height/2-300, width/10, height/15))
+  if (mouseInQuit(width/9, 4*height/13, width/10, height/15))
   {
     fill(100);
-    ellipse(width/2, height/2, 100, 100);
+    ellipse(width/2, height/5, 100, 100);
   }
-  if (mouseInCredits(width/9, height/2-150, width/10, height/15))
+  if (mouseInCredits(width/9, 6*height/13, width/10, height/15))
   {
     asist=3;
   }
-  if (mouseInSettings(width/9, height/2, width/10, height/15))
+  if (mouseInSettings(width/9, 8*height/13, width/10, height/15))
   {
     fill(100);
     ellipse(width/2, height/2, 100, 100);
   }
-  if (mouseInSnakes(width/9, height/2+150, width/10, height/15))
+  if (mouseInSnakes(width/9, 10*height/13, width/10, height/15))
   {
     fill(100);
     ellipse(width/2, height/2, 100, 100);
   }
-  if (mouseInGameMode(width/9, height/2+300, width/10, height/15))
+  if (mouseInGameMode(width/9, 12*height/13, width/10, height/15))
   {
     fill(100);
     ellipse(width/2, height/2, 100, 100);
   }
 }
-//lol
+
 void planetee()
 {
   background(0);

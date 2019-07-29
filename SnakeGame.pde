@@ -1,11 +1,12 @@
-import ddf.minim.*;
+import ddf.minim.*; //<>//
 import ddf.minim.analysis.*;
 Minim minim;
 AudioPlayer player;
 int i=0;
 void setup()
 {
-  fullScreen();
+  //fullScreen();
+  size(400, 400);
   background(10);
   setRows(rows);
   setColumns(columns);
@@ -14,7 +15,7 @@ void setup()
   println(frameCount);
   //playMusic();
   setInitialSnakePieceNumber(4);
-  fullScreen();
+
   background(0);
   ellipseMode(CENTER); 
   pb = createGraphics(3200, 1600);
@@ -35,30 +36,28 @@ void setup()
 
 void draw()
 {
-  if (intro==true)
-  {
-    if (frameCount<200)
+  
+  if (intro)
     {
-     sistemSolar();
-    } 
-    
-    /*else
-    {
-      intro=false;
-      background(10);
-      drawSnakeHead(snakeHeadPositionX, snakeHeadPositionY, headSize, eyeSize);
-      for ( i=0; i<columns; i++)
-  {
-    line(i*width/10, 0, i*width/10, height);
-  }
-  for ( i=0; i<rows; i++)
-  {
-    line(0, i*height/10, width, i*height/10);
-  }
+      sistemSolar(); //<>//
     }
-  }*/
+  else{
+    
+    background(10);
+    for ( i=0; i<columns; i++)
+    {
+      line(i*width/10, 0, i*width/10, height);
+    }
+    for ( i=0; i<rows; i++)
+    {
+      line(0, i*height/10, width, i*height/10);
+    }
+    
+    
+  }
 }
-}
+
+
 
 
 

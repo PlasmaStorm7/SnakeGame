@@ -25,8 +25,13 @@ void food(float x, float y, float foodwidth, float foodheight)
 
 void snake(float x, float y, float snakewidth, float snakeheight)
 {
-  
+
   imageMode(CENTER);
   image(planetsss[index2], x, y, snakewidth, snakeheight);
-  
+  if (frameCount%20==0 && index2<8)
+  {
+    index2++;
+  }
+  if(index2>=8)
+  index2=0;
 }

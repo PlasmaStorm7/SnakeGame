@@ -1,3 +1,7 @@
+PImage image; //<>//
+PImage [] planetsss = new PImage[9];
+
+
 import ddf.minim.*; //<>// //<>//
 import ddf.minim.analysis.*;
 Minim minim;
@@ -7,6 +11,17 @@ void setup()
 {
   fullScreen();
   background(10);
+  image=loadImage("Asteroid.png");
+  planetsss[0]=loadImage("jupiter.png");
+  planetsss[1]=loadImage("mars.png");
+  planetsss[2]=loadImage("terra.jpg");
+  planetsss[3]=loadImage("pluto.png");
+  planetsss[4]=loadImage("saturn.png");
+  planetsss[5]=loadImage("uranus.png");
+  planetsss[6]=loadImage("neptun.png");
+  planetsss[7]=loadImage("venus.png");
+  planetsss[8]=loadImage("mercury.png");
+
   setRows(rows);
   setColumns(columns);
   setInitialSnakePieceNumber(snakePieces);
@@ -16,7 +31,7 @@ void setup()
   //playMusic();
   setInitialSnakePieceNumber(4);
 
-  
+
   planeteleMirunei();
 }
 
@@ -39,35 +54,13 @@ void draw()
     }
     if (gameStarted==false)
     {
-    startGame();
+      startGame();
     }
+
     //food();
     //snake();
     //head();
     advanceGame();
     
   }
-}
-
-
-
-
-
-void drawSnakeHead(float Headx, float Heady, float sizeHead, float sizeEye )
-{
-  fill(60, 0, 60);
-  ellipse(Headx, Heady, sizeHead, sizeHead);
-  fill(0);
-  ellipse(Headx-sizeEye, Heady-sizeEye, sizeEye, sizeEye);
-  ellipse(Headx+sizeEye, Heady-sizeEye, sizeEye, sizeEye);
-  fill(255);
-  ellipse(Headx-sizeEye+5, Heady-sizeEye-5, sizeEye/4, sizeEye/4);  //the little white dots in the eyes
-  ellipse(Headx+sizeEye+5, Heady-sizeEye-5, sizeEye/4, sizeEye/4);  //the little white dots in the eyes
-  fill(0);
-  line(Headx-sizeHead/2-10, Heady-10, Headx-10, Heady-sizeHead/2-10);
-  pushMatrix();
-  rotate(45);
-  fill(100, 0, 0);
-  rect(Headx-sizeHead/2-10, Heady-sizeHead/2-10, sizeHead/2, sizeHead/2);
-  popMatrix();
 }

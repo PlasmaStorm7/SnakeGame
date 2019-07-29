@@ -15,22 +15,8 @@ void setup()
   //playMusic();
   setInitialSnakePieceNumber(4);
 
-  background(0);
-  ellipseMode(CENTER); 
-  pb = createGraphics(3200, 1600);
-  Earthr=width/6;
-  Venusr=width/8;
-  Jupiterr=width/3;
-  Saturnr=width/2.5;
-  Uranusr=width/2.2;
-  Neptunr=width/2;
-  Marsr=width/5;
-  Mercuryr=width/12;
-  Moonr=25;
-  pa = createGraphics(3200, 1600);
-  backgroundr=200;
-  backgroundg=200;
-  backgroundb=0;
+  
+  planeteleMirunei();
 }
 
 void draw()
@@ -54,6 +40,7 @@ void draw()
     {
     startGame();
     }
+    
   }
 }
 

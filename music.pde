@@ -14,6 +14,7 @@ void initializeSong()
   index=int(random(song.length));
   minim = new Minim(this);
   player=minim.loadFile(song[index], bandResolution);
+  println(song[index]);
   player.play();
   player.setGain(gain);
   player.cue(player.length());

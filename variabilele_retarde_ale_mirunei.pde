@@ -22,7 +22,7 @@ float Venusr;
 float Marsx;
 float Marsy;
 float Marsr;
-
+int index2=0;
 float Jupiterx;
 float Jupitery;
 float Jupiterr;

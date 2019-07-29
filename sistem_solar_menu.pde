@@ -36,8 +36,11 @@ void sistemSolar()
   { 
     background(0);
     fill(200, 200, 0);
-    textSize(30);
-    text("Press the sun to start", width/2-100, height/9);
+    textSize(50);
+     text("SNAKEMOB", width/2-100, height/12);
+     textSize(25);
+    text("Press the sun to start", width/2, height/7);
+   
     fill(200, 200, 0);     
     ellipse(width/2, height/2, SunD, SunD);
     pb.beginDraw();              
@@ -124,13 +127,9 @@ void sistemSolar()
     rect(width/9, 8*height/13, width/10, height/15);
     fill(60, 0, 60);
     textSize(30);
-    text("Rules&Story", width/8, 8*height/13);
-    fill(255);
-    rect(width/9, 10*height/13, width/10, height/15);
-    textSize(30);
-    fill(60, 0, 60);
-    text("Gamemode", width/8, 10*height/13);
-    fill(255);
+    text("Rules", width/8, 8*height/13);
+   
+   
   }
   if (asist==3)
   {
@@ -149,11 +148,12 @@ void sistemSolar()
   {
     background(200, 200, 0);
     textSize(20);
-    text("Rules: You have to eat as many asteroids as you can...but take care, the walls and your own body kill you.", width/5, height/2);
-    text("For each asteroid you eat, you get bigger. Get as big as you can.", width/5, height/2.2);
+    text("Rules: You have to eat as many asteroids as you can...but take care, the walls and your own body kill you.", width/5, height/2.8);
+    text("For each asteroid you eat, you get bigger. Get as big as you can.", width/5, height/2.6);
     text("you move with UP, DOWN, LEFT and RIGHT", width/5, height/2.4);
-    text("Press p for a break while playing", width/5, height/2.6);
+    text("Press p for a break while playing", width/5, height/2.2);
     text("To go back press b", width/1.7, height/1.3);
+    
     if (keyPressed==true) {
       if (key == 'b') {
         asist=2;
@@ -196,10 +196,7 @@ void mousePressed()
   {
     asist=4;
   }
-  if (mouseInGameMode(width/9, 10*height/13, width/10, height/15))
-  {
-    asist=5;
-  }
+  
 }
 
 void planetee()

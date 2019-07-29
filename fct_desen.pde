@@ -25,6 +25,8 @@ void food(float x, float y, float foodwidth, float foodheight)
 
 void snake(float x, float y, float snakewidth, float snakeheight)
 {
+  
   imageMode(CENTER);
-  image(planetsss[1], x, y, snakewidth, snakeheight);
+  image(planetsss[index2], x, y, snakewidth, snakeheight);
+  
 }

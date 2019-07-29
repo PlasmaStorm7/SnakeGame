@@ -20,10 +20,10 @@ void  planeteleMirunei()
 }
 void sistemSolar()
 {
-  background(0);
+ 
 
   if (asist==0)
-  {
+  { background(0);
     fill(200, 200, 0);
     textSize(30);
     text("Press the sun to start", width/2-100, height/9);
@@ -92,29 +92,7 @@ void sistemSolar()
   }
   if (asist==2)
   {
-    fill(backgroundr, backgroundg, backgroundb);
-    rect(0, 0, width, height);
-    if (backgroundr>176)
-    {
-      backgroundr--;
-    }
-    if (backgroundg>0)
-    {
-      backgroundr--;
-    }
-    if (backgroundb<206)
-    {
-      backgroundb++;
-    }
-
-    if (backgroundb==206)
-    {
-      asist=3;
-    }
-  }
-  if (asist==3)
-  {
-    background(0);
+    background(200, 200, 0);
     fill(255);
     rect(width/9, height/2-450, width/10, height/15);
     fill(60, 0, 60);
@@ -176,8 +154,7 @@ void mousePressed()
   }
   if (mouseInCredits(width/9, height/2-150, width/10, height/15))
   {
-    fill(100);
-    ellipse(width/2, height/2, 100, 100);
+    asist=3;
   }
   if (mouseInSettings(width/9, height/2, width/10, height/15))
   {
@@ -195,7 +172,7 @@ void mousePressed()
     ellipse(width/2, height/2, 100, 100);
   }
 }
-
+//lol
 void planetee()
 {
   background(0);

@@ -160,8 +160,7 @@ void mousePressed()
   }
   if (mouseInQuit(width/9, 4*height/13, width/10, height/15))
   {
-    fill(100);
-    ellipse(width/2, height/5, 100, 100);
+    exit();
   }
   if (mouseInCredits(width/9, 6*height/13, width/10, height/15))
   {

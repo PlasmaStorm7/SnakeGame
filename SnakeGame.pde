@@ -1,4 +1,4 @@
-PImage image; //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
+PImage image; //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
 PImage [] planetsss = new PImage[9];
 
 
@@ -20,14 +20,11 @@ void setup()
   println(frameCount);
   //playMusic();
   setInitialSnakePieceNumber(4);
-
-
-  
 }
 
 void draw()
 {
-
+ //<>//
   if (intro)
   {
     sistemSolar();
@@ -73,8 +70,7 @@ void draw()
     if (snakeDead==true)
     {
       textAlign(CENTER, CENTER);
-      text("You Died!!",width/2,height/2);
-      
+      text("You Died!!", width/2, height/2);
     }
   }
 }

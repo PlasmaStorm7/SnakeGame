@@ -2,6 +2,7 @@ int rows = 10;
 int columns = 10;
 
 boolean gamePlaying = false;
+boolean gameStarted= false;
 boolean snakeDead = false;
 boolean intro=true;
 
@@ -80,6 +81,7 @@ int getScore()
 void startGame()
 {
   gamePlaying = true;
+  gameStarted= true;
   snakeDead = false;
   snakePiecesX = new int[snakePieces];
   snakePiecesY = new int[snakePieces];

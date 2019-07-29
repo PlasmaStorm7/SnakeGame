@@ -1,12 +1,11 @@
-import ddf.minim.*; //<>//
+import ddf.minim.*; //<>// //<>//
 import ddf.minim.analysis.*;
 Minim minim;
 AudioPlayer player;
 int i=0;
 void setup()
 {
-  //fullScreen();
-  size(400, 400);
+  fullScreen();
   background(10);
   setRows(rows);
   setColumns(columns);
@@ -36,13 +35,12 @@ void setup()
 
 void draw()
 {
-  
+
   if (intro)
-    {
-      sistemSolar(); //<>//
-    }
-  else{
-    
+  {
+    sistemSolar(); //<>//
+  } else {
+
     background(10);
     for ( i=0; i<columns; i++)
     {
@@ -52,8 +50,10 @@ void draw()
     {
       line(0, i*height/10, width, i*height/10);
     }
-    
-    
+    if (gameStarted==false)
+    {
+    startGame();
+    }
   }
 }
 

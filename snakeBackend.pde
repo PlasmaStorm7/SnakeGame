@@ -6,7 +6,7 @@ boolean intro=true;
 
 int snakeHeadPositionX = 5;
 int snakeHeadPositionY = 5;
-float headSize = (width/10+height/10);
+float headSize = (width/10+height/10)*2;
 float eyeSize=headSize/5;
 
 int direction = RIGHT;

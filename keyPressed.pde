@@ -11,6 +11,6 @@ void KeyPressed()
   }
   if(keyCode==UP ||keyCode==DOWN ||keyCode==LEFT ||keyCode==RIGHT )
   {
-    
+    changeDirection(keyCode);
   }
 }

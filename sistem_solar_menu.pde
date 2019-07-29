@@ -30,10 +30,11 @@ void  planeteleMirunei()
 }
 void sistemSolar()
 {
- 
+
 
   if (asist==0)
-  { background(0);
+  { 
+    background(0);
     fill(200, 200, 0);
     textSize(30);
     text("Press the sun to start", width/2-100, height/9);
@@ -123,17 +124,42 @@ void sistemSolar()
     rect(width/9, 8*height/13, width/10, height/15);
     fill(60, 0, 60);
     textSize(30);
-    text("Settings", width/8, 8*height/13);
+    text("Rules&Story", width/8, 8*height/13);
     fill(255);
     rect(width/9, 10*height/13, width/10, height/15);
-    fill(60, 0, 60);
     textSize(30);
-    text("Snakes", width/8, 10*height/13);
+    fill(60, 0, 60);
+    text("Gamemode", width/8, 10*height/13);
     fill(255);
-    rect(width/9, 12*height/13, width/9, height/15); 
-    fill(60, 0, 60);
-    textSize(30);
-    text("GameMode", width/8, 12*height/13);
+  }
+  if (asist==3)
+  {
+    background(200, 200, 0);
+    textSize(40);
+    text("This game is made by:Stoica Diandra, Razvan Udrea and Candea Miruna", width/5, height/2);
+    textSize(20);
+    text("To go back press b", width/1.7, height/1.3);
+    if (keyPressed==true) {
+      if (key == 'b') {
+        asist=2;
+      }
+    }
+  }
+  if(asist==4)
+  {
+    background(200, 200, 0);
+    textSize(20);
+    text("Rules: You have to eat as many asteroids as you can...but take care, the walls and your own body kill you.", width/5, height/2);
+    text("For each asteroid you eat, you get bigger. Get as big as you can.", width/5, height/2.2);
+    text("you move with UP, DOWN, LEFT and RIGHT", width/5, height/2.4);
+    text("Press p for a break while playing", width/5, height/2.6);
+    text("To go back press b", width/1.7, height/1.3);
+    if (keyPressed==true) {
+      if (key == 'b') {
+        asist=2;
+      }
+    }
+  
   }
 }
 
@@ -166,20 +192,13 @@ void mousePressed()
   {
     asist=3;
   }
-  if (mouseInSettings(width/9, 8*height/13, width/10, height/15))
+  if (mouseInStory(width/9, 8*height/13, width/10, height/15))
   {
-    fill(100);
-    ellipse(width/2, height/2, 100, 100);
+    asist=4;
   }
-  if (mouseInSnakes(width/9, 10*height/13, width/10, height/15))
+  if (mouseInGameMode(width/9, 10*height/13, width/10, height/15))
   {
-    fill(100);
-    ellipse(width/2, height/2, 100, 100);
-  }
-  if (mouseInGameMode(width/9, 12*height/13, width/10, height/15))
-  {
-    fill(100);
-    ellipse(width/2, height/2, 100, 100);
+    asist=5;
   }
 }
 
@@ -226,13 +245,7 @@ boolean mouseInStart(float x, float y, float rectWidth, float rectHeight)
   return mouseX > x && mouseX < (x + rectWidth) && mouseY > y && mouseY < (y + rectHeight);
 }
 
-
-boolean mouseInSettings(float x, float y, float rectWidth, float rectHeight)
-{
-  return mouseX > x && mouseX < (x + rectWidth) && mouseY > y && mouseY < (y + rectHeight);
-}
-
-boolean mouseInSnakes(float x, float y, float rectWidth, float rectHeight)
+boolean mouseInStory(float x, float y, float rectWidth, float rectHeight)
 {
   return mouseX > x && mouseX < (x + rectWidth) && mouseY > y && mouseY < (y + rectHeight);
 }

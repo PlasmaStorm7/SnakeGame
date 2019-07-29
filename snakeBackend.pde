@@ -1,5 +1,5 @@
-int rows = 10;
-int columns = 10;
+int rows = 30;
+int columns = 30;
 
 boolean gamePlaying = false;
 boolean gameStarted= false;
@@ -11,9 +11,9 @@ int snakeHeadPositionY = 5;
 float headSize = (width/10+height/10)*2;
 float eyeSize=headSize/5;
 
-int direction = RIGHT;
+int direction = LEFT;
 int lastDirection;
-int snakePieces = 3;
+int snakePieces = 2;
 int[] snakePiecesX;
 int[] snakePiecesY;
 int[][] board;

@@ -1,5 +1,6 @@
 int bandResolution=1024;
-playMusic(){
+String song;
+void playMusic(){
 initializeSong();
 
   
@@ -7,6 +8,7 @@ initializeSong();
 
 void initializeSong()
 {
+  song=random()
   minim = new Minim(this);
   player=minim.loadFile(song, bandResolution);
   player.play();

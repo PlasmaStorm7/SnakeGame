@@ -13,7 +13,7 @@ float eyeSize=headSize/5;
 
 int direction = RIGHT;
 int lastDirection;
-int snakePieces = 3;
+int snakePieces = 2;
 int[] snakePiecesX;
 int[] snakePiecesY;
 int[][] board;

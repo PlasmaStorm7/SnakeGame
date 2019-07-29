@@ -1,12 +1,13 @@
 PImage image; //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
 PImage [] planetsss = new PImage[9];
-
-
 import ddf.minim.*;
 import ddf.minim.analysis.*;
 Minim minim;
+Minim minim2;
 AudioPlayer player;
+AudioPlayer elevatormusic;
 int i=0;
+boolean introsong=true;
 void setup()
 {
   fullScreen();
@@ -18,11 +19,9 @@ void setup()
   setInitialSnakeHeadPosition(snakeHeadPositionX, snakeHeadPositionY);
   setSnakeDirection(direction);
   println(frameCount);
-  //playMusic();
-  setInitialSnakePieceNumber(4);
-
-
+  initializeSong("Sandbox.mp3");
   
+  setInitialSnakePieceNumber(4);
 }
 
 void draw()
@@ -32,6 +31,13 @@ void draw()
   {
     sistemSolar();
   } else {
+    if (introsong==true) 
+    {
+      player.close();
+      initializeSong("Vanishing-Point.mp3");
+      elevatorSong();
+      introsong=false;
+    }
 
     background(10);
     for ( i=0; i<columns; i++)
@@ -73,8 +79,7 @@ void draw()
     if (snakeDead==true)
     {
       textAlign(CENTER, CENTER);
-      text("You Died!!",width/2,height/2);
-      
+      text("You Died!!", width/2, height/2);
     }
   }
 }

@@ -5,8 +5,12 @@ void keyPressed()
     if (gamePlaying == false)
     {
       unpause();
+      player.pause();
+      elevatormusic.play();
     } else {
       pause();
+      player.play();
+      elevatormusic.pause();
     }
   }
   if(keyCode==UP ||keyCode==DOWN ||keyCode==LEFT ||keyCode==RIGHT )
